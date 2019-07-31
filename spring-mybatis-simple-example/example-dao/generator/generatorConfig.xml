@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--主库配置-->
+    <context id="example" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <plugin type="com.daishun.example.plugin.LombokPlugin"/>
+        <plugin type="com.daishun.example.plugin.DaoExtendPlugin">
+            <property name="targetXmlPackage" value="mybatis/dao"/>
+            <!--<property name="" value=""/>-->
+        </plugin>
+        <!--通用 Mapper 插件，可以生成带注解的实体类-->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.daishun.example.dao.MainMapper"/>
+            <property name="caseSensitive" value="true"/>
+            <property name="forceAnnotation" value="true"/>
+            <property name="beginningDelimiter" value="`"/>
+            <property name="endingDelimiter" value="`"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/example?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false"
+                        userId="root"
+                        password="123456"/>
+        <javaModelGenerator targetPackage="com.daishun.example.model.domain"
+                            targetProject="../example-model/src/main/java"/>
+        <sqlMapGenerator targetPackage="mybatis/mapper"
+                         targetProject="src/main/resources"/>
+        <javaClientGenerator targetPackage="com.daishun.example.dao.mapper"
+                             targetProject="src/main/java" type="XMLMAPPER"/>
+        <table tableName="user" domainObjectName="User"
+               enableSelectByExample="true">
+            <generatedKey column="id" sqlStatement="MySql"
+                          identity="true"/>
+            <columnRenamingRule
+                    searchString="user" replaceString=""/>
+        </table>
+    </context>
+
+</generatorConfiguration>
