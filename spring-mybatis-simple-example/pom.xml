@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <groupId>com.daishun</groupId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>example-api</module>
-        <module>example-service</module>
-        <module>example-dao</module>
-        <module>example-common</module>
-        <module>example-model</module>
+        <module>spring-mybatis-simple-example-api</module>
+        <module>spring-mybatis-simple-example-service</module>
+        <module>spring-mybatis-simple-example-dao</module>
+        <module>spring-mybatis-simple-example-common</module>
+        <module>spring-mybatis-simple-example-model</module>
     </modules>
     <artifactId>spring-mybatis-simple-example</artifactId>
     <modelVersion>4.0.0</modelVersion>
@@ -51,8 +51,6 @@
         </dependency>
 
     </dependencies>
-
-
 
 
     <repositories>
