@@ -1,7 +1,7 @@
 package com.daishun.springmybatissimpleexample.service.user;
 
-import com.daishun.springmybatissimpleexample.dao.impl.UserRepository;
-import com.daishun.springmybatissimpleexample.model.domain.User;
+import com.daishun.springmybatissimpleexample.repository.domain.User;
+import com.daishun.springmybatissimpleexample.repository.impl.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

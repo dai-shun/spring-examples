@@ -1,6 +1,6 @@
 package com.daishun.springmybatissimpleexample.controller;
 
-import com.daishun.springmybatissimpleexample.model.domain.User;
+import com.daishun.springmybatissimpleexample.repository.domain.User;
 import com.daishun.springmybatissimpleexample.service.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

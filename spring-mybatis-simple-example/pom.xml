@@ -8,9 +8,8 @@
     <modules>
         <module>spring-mybatis-simple-example-api</module>
         <module>spring-mybatis-simple-example-service</module>
-        <module>spring-mybatis-simple-example-dao</module>
+        <module>spring-mybatis-simple-example-repository</module>
         <module>spring-mybatis-simple-example-common</module>
-        <module>spring-mybatis-simple-example-model</module>
     </modules>
     <artifactId>spring-mybatis-simple-example</artifactId>
     <modelVersion>4.0.0</modelVersion>
