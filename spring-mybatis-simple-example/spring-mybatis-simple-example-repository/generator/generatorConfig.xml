@@ -11,6 +11,7 @@
         <property name="javaFileEncoding" value="UTF-8"/>
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
         <plugin type="com.daishun.springmybatissimpleexample.common.plugin.LombokPlugin"/>
+        <plugin type="com.daishun.springmybatissimpleexample.common.plugin.FastJsonPlugin"/>
         <plugin type="com.daishun.springmybatissimpleexample.common.plugin.RepositoryPlugin">
             <property name="targetXmlPackage" value="mybatis/dao"/>
             <property name="targetXmlProject" value="src/main/resources"/>

@@ -123,7 +123,7 @@ public class RepositoryPlugin extends PluginAdapter {
         @Override
         public boolean shouldCreateFile(TableConfiguration configuration) {
             String fileName = this.getFileName(configuration);
-            File file = FileUtils.getFile(this.targetPackagePath, fileName + ".java");
+            File file = FileUtils.getFile(this.targetPackagePath, fileName);
             return !file.exists();
         }
 
